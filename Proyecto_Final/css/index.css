@@ -1,0 +1,315 @@
+:root {
+  font-size: 14px;
+  --bgcolor: #191a1d;
+  --button-grey: #36383f;
+  --grey-light: #8a8a8a;
+  --button-green: hsl(139deg, 59%, 55%);
+  --button-green-dark: hsl(140deg, 59%, 35%);
+  --explore-yellow: rgb(255, 221, 64);
+  --title-blue: #77d4e0;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  box-sizing: border-box;
+  background-color: var(--bgcolor);
+  font-family: 'Lato', Tahoma, sans-serif;
+}
+
+/* HEADER STYLES */
+
+.header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 90px;  
+  background: black;
+  border-top: 2px solid var(--grey-light);  
+}
+
+.left-header {
+  flex: 220px 0 0;
+}
+
+.logo-section {
+  padding: 1rem;
+}
+
+.logo-section svg {
+  width: 100%;
+  stroke: white;  
+}
+
+.center-header {
+  display: flex;
+  flex: 1;
+}
+
+.nav-section {
+  padding-left: 2rem;
+}
+
+.explore {
+  color: var(--explore-yellow);
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.nav ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.nav li {
+  width: max-content;
+  padding: 0px 12px 0px 0px;
+  list-style: none;
+}
+
+.nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.6em;
+  font-weight: 800;
+  transition: all 0.3s;
+}
+
+.nav a:hover {
+  color: var(--explore-yellow);
+}
+
+.spark {
+  margin-left: 1.5rem;
+}
+
+.spark > a {
+  color: var(--grey-light);
+  font-weight: 500;
+}
+
+.spark > a::after {
+  content: url('../images/chevron_down_grey.svg');
+  display: inline-block;
+  width: 1.2rem;
+  padding-left: 1rem;
+}
+
+.spark > a:hover::after {
+  content: url('../images/chevron_down_yellow.svg');
+}
+
+.right-header {
+  height: 100%;
+}
+
+.btns-header-section {
+  display: flex;
+  align-items: center;
+  height: 100%;  
+  gap: 1rem;  
+  padding-right: 1rem;
+}
+
+.btn-top {
+  height: 65%;
+  border: 0;
+  border-radius: 4px;
+  box-sizing: border-box;
+  padding: 0 1.4rem;
+  background: #36383f;
+  color: white;
+  font-family: Calibri,'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+  font-size: 1.4em;
+  font-weight: 700;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.btn-top:hover {
+  background: #424650;
+}
+
+.btn-top:nth-child(1) {
+  display: flex;
+  align-items: center;
+}
+
+.btn-top:nth-child(1)::after {
+  content: url('../images/chevron_down_green.svg');
+  display: inline-block;
+  position: relative;
+  top: 3px;
+  width: 1.8rem;
+  padding-left: 1rem;
+}
+
+.btn-top:nth-child(2) {
+  padding: 0;
+  background: transparent;
+}
+
+.btn-top svg {
+  width: 2.2rem;
+  padding: 0.5rem 0.5rem 0;
+  fill: #787b88;
+  transition: all 0.2s;
+}
+
+.btn-top:hover svg {
+  fill: white;
+}
+
+/* END HEADER STYLES */
+
+/* MAIN STYLES */
+
+.main-section {
+  display: grid;
+  grid-template-columns: 1fr 0.8fr;
+  align-items: end;
+  gap: 100px;
+  padding-top: 50px;  
+  box-shadow: inset -165px -98px 200px #191a1d;
+  background: #424650;
+}
+
+.left-main {
+  align-self: start;
+}
+
+.rol-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 0.5rem 60px 60px;
+  gap: 3rem;
+}
+
+.rol-section h1 {
+  margin-bottom: 0;
+  color: #fbfbfb;
+  font-weight: 300;
+  font-size: 2.5rem;
+}
+
+.rol-section .strong-white {
+  font-weight: 700;
+}
+
+#hand {
+  display: inline-block;
+  padding-left: 1rem;
+  transform: rotate(-45deg);
+}
+
+.rol-section p {
+  margin: 0 0 1rem;
+  color: #b8b8b8;
+  font-size: 2.1rem;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.btns-main-section {
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+}
+
+.btns-main-section button {
+  padding: 1rem 2rem;
+  font-size: 2rem;
+  border-radius: 3px;
+  border: 0;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+#sign {
+  background-color: var(--button-green);
+}
+
+#sign:hover {
+  background-color: var(--button-green-dark);
+}
+
+#learn {
+  background-color: black;
+  color: white;  
+}
+
+#learn:hover {
+  color: var(--button-green);
+}
+
+.example-section {
+  width: 100%;
+}
+
+.example-title h2 {
+  margin-bottom: 0;
+  padding: 0px 0px 0.5rem 1rem;
+  color: #fbfbfb;
+}
+
+.example-title .strong-blue {
+  color: var(--title-blue);
+}
+
+.example-img {
+  box-shadow: -4px 0px 3rem #0000008a;
+}
+
+.example-img img {
+  width: 100%;
+}
+
+/* END MAIN STYLES */
+
+/* FOOTER STYLES */
+
+.footer-section {
+  margin-bottom: 100px;
+}
+
+.nav-footer ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.nav-footer li {
+  background: var(--button-grey);
+  list-style: none;
+  text-align: center;
+  border: 1px solid var(--grey-light);
+}
+
+.nav-footer a {
+  display: inline-block;
+  width: 100%;
+  padding: 1rem 0;
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 700;
+  transition: all 0.3s;
+}
+
+.nav-footer a:hover {
+  background-color: black;
+}
+
+.nav-footer .strong-white {
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+/* END FOOTER STYLES */
